@@ -56,17 +56,28 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .sidebar-dos {
+  .contenido-principal {
     grid-column: 1 / 3;
+    grid-row: 2 / 3;
   }
 }
 
 @media (min-width: 768px) {
   .contenedor-grid {
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: column;
+  }
+
+  .sidebar-uno {
+    grid-column: 1 / 2;
+  }
+
+  .contenido-principal {
+    grid-column: 2 / 3;
+    grid-row: unset;
   }
 
   .sidebar-dos {
-    grid-column: unset;
+    grid-column: 3 / 4;
   }
 }
